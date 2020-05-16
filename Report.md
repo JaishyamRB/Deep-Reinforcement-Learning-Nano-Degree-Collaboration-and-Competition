@@ -29,8 +29,7 @@ This helps to avoid overestimation of Q-values and makes the training more stabl
     4. Minimize the loss for the local actor model
 4. Soft update of the target critic and actor models
 
-The MADDPG agent has a common `Replay Buffer` from which experiences are sampled for each agents. By using common replay buffer actions taken by one agent can affect other.
-Thus both the agents learn from the mistakes made by any one agent.
+The MADDPG agent has a common `Replay Buffer` from which experiences are sampled for each agents. By using common replay buffer, actions taken by one agent can affect other also. Thus both the agents learn from the mistakes made by any one agent. The learning algorithm is similar to DDPG agent expect that the same learning algorithm is looped over all agents.
 
  
 ## Network architecture
